@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app_bloc/add_todo_page.dart';
+import 'package:todo_app_bloc/bloc/todo_bloc.dart';
 import 'package:todo_app_bloc/cubit/todo_cubit.dart';
 import 'package:todo_app_bloc/todo_list.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => TodoCubit(),
+      create: (context) => todoBloc(),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
